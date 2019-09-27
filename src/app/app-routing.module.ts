@@ -5,8 +5,19 @@ import { RouterModule, Routes, PreloadAllModules } from "@angular/router";
 const routes: Routes = [
   {
     path: "",
-    loadChildren:
-      "./modules/authentication/authentication.module#AuthenticationModule"
+    loadChildren: "./modules/authentication/authentication.module#AuthenticationModule"
+  },
+  {
+    path: "users",
+    loadChildren: "./modules/users/users.module#UsersModule"
+  },
+  {
+    path: "parameters",
+    loadChildren: "./modules/parameters/parameters.module#ParametersModule"
+  },
+  {
+    path: "ballots",
+    loadChildren: "./modules/ballots/ballots.module#BallotsModule"
   }
 ];
 

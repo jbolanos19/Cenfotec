@@ -18,6 +18,14 @@ const routes: Routes = [
   {
     path: "ballots",
     loadChildren: "./modules/ballots/ballots.module#BallotsModule"
+  },
+  {
+    path: "main",
+    loadChildren: "./modules/ballots/ballots.module#BallotsModule"
+  },
+  {
+    path: "home",
+    loadChildren: "./modules/home/home.module#HomeModule"
   }
 ];
 

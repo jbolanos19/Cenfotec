@@ -3,14 +3,34 @@
       <div class="col-12">
         <h3>Sign Up</h3>
         <form [formGroup]="form" (ngSubmit)="signUp()">
+            <div class="form-group row">
+                <label class="label col-2" for="name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control large col-12"
+                  formControlName="name"
+                  [class.is-invalid]="!isControlValid('name')"
+                />
+              </div>
+            <div class="form-group row">
+                <label class="label col-2" for="sname">Surnames</label>
+                <input
+                  type="text"
+                  name="sname"
+                  class="form-control large col-12"
+                  formControlName="sname"
+                  [class.is-invalid]="!isControlValid('sname')"
+                />
+              </div>
           <div class="form-group row">
-            <label class="label col-2" for="fname">First Name</label>
+            <label class="label col-2" for="uname">Username</label>
             <input
               type="text"
-              name="fname"
+              name="uname"
               class="form-control large col-12"
-              formControlName="fname"
-              [class.is-invalid]="!isControlValid('fname')"
+              formControlName="uname"
+              [class.is-invalid]="!isControlValid('uname')"
             />
           </div>
   
@@ -62,16 +82,6 @@
               }}</option>
             </select>
           </div>
-  
-          <!-- <button
-            class="btn btn-primary mt-3"
-            type="submit"
-            [disabled]="loginForm.invalid"
-          >
-            LogIn
-          </button> -->
-  
-          <!-- <a type="button" class="btn btn-link" [routerLink]="'/sign-up'">Sing Up</a> -->
   
           <button class="btn btn-primary mt-3" type="submit">
             Sign Up

@@ -1,0 +1,90 @@
+{
+  "users": [
+    { 
+      "id":1,
+      "name": "Jason", 
+      "surnames": "Bolaños Sequeira", 
+      "username": "jbolanos",
+      "rol": "administrador", 
+      "status": "activo", 
+      "passworrd": "1234", 
+      "changepassword":"0",
+      "identificacion": "123456" 
+    },
+    {  
+      "id":2,
+      "name": "María", 
+      "surnames": "Perez Gamboa", 
+      "username": "mperez",
+      "rol": "operador", 
+      "status": "activo", 
+      "passworrd": "5", 
+      "changepassword":"0",
+      "identificacion": "54646" 
+    },
+    {  
+      "id":3,
+      "name": "Juan Carlos", 
+      "surnames": "Céspedes Morales", 
+      "username": "jcespedes",
+      "rol": "supervisor", 
+      "status": "activo", 
+      "passworrd": "123456", 
+      "changepassword":"0",
+      "identificacion": "99514" 
+    }
+  ],
+  "parameters": [
+    { "id": 1, 
+      "note": "some comment", 
+      "samplingplan": "1 de 50", 
+      "image": "" , 
+      "detail": ""
+    },
+    { "id": 2, 
+      "note": "Watch the item", 
+      "samplingplan": "1 de 100", 
+      "image": "" , 
+      "detail": ""
+    }
+    ],
+  "ballots": [
+    { "id": "1", 
+      "idmachine": "1234", 
+      "idpart": "124", 
+      "rev":"1", 
+      "status": "ABIERTA", 
+      "date": "12/12/2012" , 
+      "userid": "2", 
+      "description": "Compra de materiales"
+    },
+    { "id": "2", 
+      "idmachine": "9999", 
+      "idpart": "124", 
+      "rev":"5", 
+      "status": "ABIERTA", 
+      "date": "12/12/2012" , 
+      "userid": "2", 
+      "description": "Compra de materiales"
+    },
+    { "id": "3", 
+      "idmachine": "5546", 
+      "idpart": "124", 
+      "rev":"0", 
+      "status": "ABIERTA", 
+      "date": "12/12/2012" , 
+      "userid": "4", 
+      "description": "Compra de materiales"
+    },
+    { "id": "4", 
+      "idmachine": "456", 
+      "idpart": "333", 
+      "rev":"1", 
+      "status": "CERRADA", 
+      "date": "12/12/2012" , 
+      "userid": "3", 
+      "description": "Cable pequeño"
+    }
+ ]
+}
+

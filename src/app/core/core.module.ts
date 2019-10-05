@@ -11,7 +11,6 @@ import { LocalstorageService } from "./services/localstorage.service";
 import { UsersService } from './data-services/users.service';
 import { ParametersService } from './data-services/parameters.service';
 import { BallotsService } from './data-services/ballots.service';
-import { from } from 'rxjs';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({

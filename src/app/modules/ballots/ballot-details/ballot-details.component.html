@@ -1,0 +1,29 @@
+<div class="row" *ngIf="ballot">
+    <div class="col-4">
+      <!--img class="rounded-circle w-100" [src]="customer.img" alt="" /-->
+    </div>
+    <div class="col-8">
+      <div class="row">
+        <div class="col-12">Máquina: {{ ballot.idmachine }}</div>
+      </div>
+      <div class="row">
+        <div class="col-12">Parte: {{ ballot.idpart }}</div>
+      </div>
+      <div class="row">
+        <div class="col-12">Revisión: {{ ballot.rev }}</div>
+      </div>
+      <div class="row">
+        <div class="col-12">Estado: {{ ballot.status }}</div>
+      </div>
+      <div class="row">
+        <div class="col-12">Fecha: {{ ballot.date }}</div>
+      </div>
+      <div class="row">
+        <div class="col-12">Usuario ID: {{ ballot.userid }}</div>
+      </div>
+      <div class="row">
+        <div class="col-12">Detalle: {{ ballot.description }}</div>
+      </div>
+    </div>
+  </div>
+  

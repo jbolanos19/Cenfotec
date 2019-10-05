@@ -28,5 +28,22 @@
           </li>
         </ul>
       </div>
+      <!--img [src]="customer.img" class="card-img-top" alt="..." /-->
+      <div class="card-body">
+        <h5 class="card-title">{{ ballots.id }}</h5>
+        <p><strong>Máquina:</strong> {{ ballots.idmachine }}</p>
+        <p><strong>Parte:</strong> {{ ballots.idpart }}</p>
+        <p><strong>Revisión:</strong> {{ ballots.rev }}</p>
+        <p class="card-text">
+          {{ ballots.description }}
+        </p>
+        <button (click)="openBallotModal()" class="btn btn-primary mr-3">
+          Edit
+        </button>
+        <button (click)="goToDetails()" class="btn btn-secondary mr-3">
+          Details
+        </button>
+        <button (click)="delete()" class="btn btn-danger">Delete</button>
+      </div>
     </nav>
   </div>

@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-12">
+      <!--h1>{{ "CUSTOMERS.TITLE" | translate }}</h1-->
+      <hr />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <button class="btn btn-primary mb-3" (click)="openBallotModal(false)">
+        Crear Customer
+      </button>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="card-columns">
+      <div class="card" *ngFor="let ballot of ballots">
+        <Final-ballot
+          [ballot]="ballot"
+          (success)="loadBallots()"
+          (deletedUser)="deteleBalllot($event)"
+        ></Final-ballot>
+      </div>
+    </div>
+  </div>
+  
+  <Final-pagination
+    [page]="pagination.page"
+    [pageSize]="pagination.pageSize"
+    [totalElements]="pagination.totalElements"
+    (recordsPerPageChanged)="setRecordsPerPage( $event )"
+    (pageChanged)="setPage( $event )"
+  ></Final-pagination>

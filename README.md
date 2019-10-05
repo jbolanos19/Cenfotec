@@ -34,3 +34,7 @@ También hay que instalar Bootstrap4: npm install bootstrap
 ## para loguear
 
 El usuario es test@ehospital.com, y la clave es 123456789
+
+## la base de datos json - server
+
+Está en la carpeta db

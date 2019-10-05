@@ -16,25 +16,25 @@ export class ParametersService {
 
     return this.http
       .get(`${ CONFIG.api.basePath }/parameters`)
-      .pipe(catchError(this.handleError<any>("getParameter")));
+      .pipe(catchError(this.handleError<any>("getParameters")));
   }
 
   public addParameters(data: any): Observable<any> {
     return this.http
       .post(`${ CONFIG.api.basePath }/parameters`, data)
-      .pipe(catchError(this.handleError<any>("addParameter")));
+      .pipe(catchError(this.handleError<any>("addParameters")));
   }
 
   public deleteParameters(id: number): Observable<any> {
     return this.http
       .delete(`${ CONFIG.api.basePath }/parameters/${id}`)
-      .pipe(catchError(this.handleError<any>("deleteParameter")));
+      .pipe(catchError(this.handleError<any>("deleteParameters")));
   }
 
   public updateParameters(id: number, data:any): Observable<any> {
     return this.http
       .patch(`${ CONFIG.api.basePath }/parameters/${id}`, data )
-      .pipe(catchError(this.handleError<any>("updateParameter")));
+      .pipe(catchError(this.handleError<any>("updateParameters")));
   }
 
 

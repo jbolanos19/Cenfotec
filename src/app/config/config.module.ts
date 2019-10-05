@@ -10,5 +10,11 @@ export const CONFIG = {
 
   api: {
     basePath: "http://localhost:3000"
+  },
+  
+  pagination: {
+    page: 1,
+    pageSize: 20,
   }
+
 };

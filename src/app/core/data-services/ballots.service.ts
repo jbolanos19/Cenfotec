@@ -3,15 +3,40 @@ import { HttpClient, HttpParams } from "@angular/common/http";
 import { Observable, of } from "rxjs";
 import { catchError, map, switchMap, timeout } from "rxjs/operators";
 import { CONFIG } from 'src/app/config/config.module';
+import { UtilsService } from "../services/utils.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class BallotsService {
 
-  constructor(private readonly http: HttpClient) { }
+  constructor(
+    private readonly http: HttpClient,
+    private readonly utilsService: UtilsService
+    ) { }
+  public getBallots(pagination?: any): Observable<any> {
+    if (pagination) {
+      pagination = {
+        _page: pagination.page,
+        _limit: pagination.pageSize
+      };
+    }
 
-  public getCustomers(): Observable<any> {
+    const params: HttpParams = this.utilsService.generateParams(pagination);
+
+    return this.http
+      .get(`${CONFIG.api.basePath}/ballots`, { params, observe: "response" })
+      .pipe(
+        map(response => {
+          console.log(response);
+          
+          return this.utilsService.extractData(response);
+        }),
+        catchError(this.handleError<any>("getBallot"))
+      );
+  }
+
+  public getBallot(): Observable<any> {
     const params: HttpParams = this.generateParams({ _page: 1, _limit: 3 });
 
     return this.http
@@ -19,22 +44,22 @@ export class BallotsService {
       .pipe(catchError(this.handleError<any>("getBallot")));
   }
 
-  public addCustomers(data: any): Observable<any> {
+  public addBallots(data: any): Observable<any> {
     return this.http
       .post(`${ CONFIG.api.basePath }/ballots`, data)
-      .pipe(catchError(this.handleError<any>("addBallot")));
+      .pipe(catchError(this.handleError<any>("addBallots")));
   }
 
-  public deleteCustomer(id: number): Observable<any> {
+  public deleteBallots(id: number): Observable<any> {
     return this.http
       .delete(`${ CONFIG.api.basePath }/ballots/${id}`)
-      .pipe(catchError(this.handleError<any>("deleteBallot")));
+      .pipe(catchError(this.handleError<any>("deleteBallots")));
   }
 
-  public updateCustomer(id: number, data:any): Observable<any> {
+  public updateBallots(id: number, data:any): Observable<any> {
     return this.http
       .patch(`${ CONFIG.api.basePath }/ballots/${id}`, data )
-      .pipe(catchError(this.handleError<any>("updateBallot")));
+      .pipe(catchError(this.handleError<any>("updateBallots")));
   }
 
 

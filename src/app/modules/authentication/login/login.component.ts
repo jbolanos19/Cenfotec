@@ -24,13 +24,12 @@ export class LoginComponent implements OnInit {
     const { email, password } = form.value;
 
     if (this.authenticationService.login(form.value)) {
-      console.log('here');
-      
-      this.route.navigate(['/users'])
+      window.alert("Login con éxito. Bienvenido al sistema IPIF");
+      this.route.navigate(['/home'])
+    } else 
+    {
+      window.alert("Por favor verifique el usuario y la contraseña. Acceso denegado");
     };
-
-    console.log(email, " ", password);
-
   }
 
   public gotoSingUp() {

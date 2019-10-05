@@ -12,6 +12,7 @@ import { UsersService } from './data-services/users.service';
 import { ParametersService } from './data-services/parameters.service';
 import { BallotsService } from './data-services/ballots.service';
 import { from } from 'rxjs';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   declarations: [HeaderComponent],
@@ -19,7 +20,8 @@ import { from } from 'rxjs';
     CommonModule,
     NgbModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    AngularFontAwesomeModule
   ],
   exports: [CommonModule, HttpClientModule, HeaderComponent],
   providers: [

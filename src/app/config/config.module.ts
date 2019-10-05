@@ -4,8 +4,8 @@ export const CONFIG = {
   },
 
   adminUser: {
-    email: "admin@cenfo.com",
-    password: "Test1234!" 
+    email: "test@ehospital.com",
+    password: "123456789" 
   },
 
   api: {
